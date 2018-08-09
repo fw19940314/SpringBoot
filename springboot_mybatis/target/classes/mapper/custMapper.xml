@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.eml.mapper.CustMapper">
+    <select id="findCustById" resultType="com.eml.domain.Cust">
+    select * from CUST where id = #{id}
+    </select>
+
+    <insert id="insertCust">
+        insert into CUST(CUST_NAME,CUST_AGE,CUST_GENDER) VALUES (#{custName},#{custAge},#{custGender})
+    </insert>
+</mapper>

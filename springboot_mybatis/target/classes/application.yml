@@ -1,0 +1,38 @@
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3308/SPRINGBOOT
+    driver-class-name: com.mysql.jdbc.Driver
+#    阿里的DruidDataSource数据源可以看到后台监控
+    type: com.alibaba.druid.pool.DruidDataSource
+#    springframework.jdbc提供的数据源
+#    type: org.springframework.jdbc.datasource.DriverManagerDataSource
+
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+#   配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    filters: stat,wall
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+
+mybatis:
+#  配置文件位置
+  config-location: classpath:mybatis-config.xml
+#  sql映射文件位置
+  mapper-locations: classpath:mapper/*.xml
+#    根据sql自动生成数据表
+#    schema:
+#      - classpath:sql/xx.sql
+
+
