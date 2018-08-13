@@ -12,5 +12,7 @@
  在springboot_cache的基础上，SpringBoot注解方式使用Cache结合Redis进行操作，
  将业务数据存储到Redis数据库中的详细步骤，以及各项配置；
  这里可以结合我的博客 [链接](https://blog.csdn.net/fw19940314/article/details/81587936)
+## thymeleaf
+  这里主要使用的SpringBoot结合thymeleaf模板引擎的使用；这里小Demo中还包括Logback的配置使用，以及国际化的使用；
  
  
