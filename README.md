@@ -14,5 +14,8 @@
  这里可以结合我的博客 [链接](https://blog.csdn.net/fw19940314/article/details/81587936)
 ## thymeleaf
   这里主要使用的SpringBoot结合thymeleaf模板引擎的使用；这里小Demo中还包括Logback的配置使用，以及国际化的使用；
+## springboot_rabbitmq 
+  springboot整合RabbitMQ的使用，通过自动配置提供的工具，**RabbitTemplate**来操作消息的发送以及接受，通过基于
+  注解的形式，来监听消息队列中的消息等。
  
  
