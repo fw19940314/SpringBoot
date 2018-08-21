@@ -17,5 +17,8 @@
 ## springboot_rabbitmq 
   springboot整合RabbitMQ的使用，通过自动配置提供的工具，**RabbitTemplate**来操作消息的发送以及接受，通过基于
   注解的形式，来监听消息队列中的消息等。
+## springboot_scheduled_mail
+  DEMO中包括异步的使用，定时任务的使用，以及邮件使用。通过springboot的整合，可以通过简单的配置来实现这些常用的web开发
+  中需要使用的功能。
  
  
