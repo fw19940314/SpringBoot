@@ -11,6 +11,7 @@ public class User implements Serializable {
     private Integer id;
     private String userName;
     private String userAge;
+    private String userVersion;
 
     public Integer getId() {
         return id;
@@ -36,12 +37,21 @@ public class User implements Serializable {
         this.userAge = userAge;
     }
 
+    public String getUserVersion() {
+        return userVersion;
+    }
+
+    public void setUserVersion(String userVersion) {
+        this.userVersion = userVersion;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", userName='" + userName + '\'' +
                 ", userAge='" + userAge + '\'' +
+                ", version=" + userVersion +
                 '}';
     }
 }

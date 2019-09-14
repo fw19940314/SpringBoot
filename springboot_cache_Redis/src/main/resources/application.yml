@@ -2,7 +2,7 @@ spring:
   datasource:
     username: root
     password: 123456
-    url: jdbc:mysql://127.0.0.1:3308/SPRINGBOOT
+    url: jdbc:mysql://127.0.0.1:3306/test
     driver-class-name: com.mysql.jdbc.Driver
     type: org.springframework.jdbc.datasource.DriverManagerDataSource
 
@@ -23,11 +23,14 @@ spring:
     useGlobalDataSourceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
 #   Redis服务连接
-  redis:
+#  redis:
     host: localhost
     port: 6379
-
-
+#  redis:
+#    host: 192.168.1.37
+#    port: 6379
+#    password: Uni-Ubi@2015PL
+#    database: 8
 
 mybatis:
   configuration:

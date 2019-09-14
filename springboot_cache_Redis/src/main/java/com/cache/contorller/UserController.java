@@ -5,9 +5,7 @@ import com.cache.domain.User;
 import com.cache.mapper.UserMapper;
 import com.cache.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Auther: jerry.feng
@@ -27,8 +25,9 @@ public class UserController {
         return user;
     }
 
-    @GetMapping("/insertUser")
-    public User save(User user) {
+    @PostMapping("/insertUser")
+    public User save(@RequestBody User user) {
+        System.out.println("user:"+user.toString());
         int total = userMapper.insertUser(user);
         return user;
     }
