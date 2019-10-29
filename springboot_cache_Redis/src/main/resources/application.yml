@@ -23,14 +23,9 @@ spring:
     useGlobalDataSourceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
 #   Redis服务连接
-#  redis:
+  redis:
     host: localhost
     port: 6379
-#  redis:
-#    host: 192.168.1.37
-#    port: 6379
-#    password: Uni-Ubi@2015PL
-#    database: 8
 
 mybatis:
   configuration:

@@ -78,6 +78,23 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.31</version>
         </dependency>
+        <!--&lt;!&ndash;uniubi 链路日志&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>com.uniubi.common.util</groupId>-->
+            <!--<artifactId>uniubi-common-util</artifactId>-->
+            <!--<version>1.0.0.RELEASE</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>com.uniubi.common.log</groupId>-->
+            <!--<artifactId>uniubi-common-log</artifactId>-->
+            <!--<version>1.0.1.RELEASE</version>-->
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<groupId>ch.qos.logback</groupId>-->
+                    <!--<artifactId>logback-core</artifactId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
+        <!--</dependency>-->
     </dependencies>
 
     <build>
