@@ -1,24 +1,18 @@
 package com.cache;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.cache.common.HttpUtil;
-import com.cache.config.MyRedisConfig;
 import com.cache.domain.*;
 import com.cache.mapper.UserMapper;
 import com.cache.service.RedisService;
-import com.cache.service.UserService;
-import com.fasterxml.jackson.annotation.JsonFormat;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Bean;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
-import sun.jvm.hotspot.HelloWorld;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -137,8 +131,7 @@ public class SpringbootCacheApplicationTests {
 
     @Test
     public void getvalue() {
-//        84E0F4219C3B01FA,84E0F420014302F8,84E0F420014302FA,84E0F4200CA602FA,84E0F4200DD102FA,84E0F4200D8402FA,84E0F4221A0E30FA 84E0F4214B2502FA
-        String test_device = stringRedisTemplate.opsForValue().get("deviceVersion:84E0F4226079607A");
+        String test_device = stringRedisTemplate.opsForValue().get("deviceVersion:84E0F4226316607A");
         System.out.println(test_device);
         DeviceRedisInfo deviceRedisInfo = JSONObject.parseObject(test_device, DeviceRedisInfo.class);
         System.out.println(deviceRedisInfo.getDeviceKey());
@@ -165,4 +158,6 @@ public class SpringbootCacheApplicationTests {
         DeviceOnlineStateView deviceOnlineStateView = JSONObject.parseObject(str, DeviceOnlineStateView.class);
         System.out.println(deviceOnlineStateView.toString());
     }
+
+
 }
